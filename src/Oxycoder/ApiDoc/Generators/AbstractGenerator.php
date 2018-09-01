@@ -255,7 +255,7 @@ abstract class AbstractGenerator
 
         preg_match('/(validate\(\[)(.*?)(\]\))/s', $body, $result);
         if ($result) {
-            $stringArr = explode(',', $result[2]);
+            $stringArr = preg_split("/'(\s|),+/s", $result[2], -1, PREG_SPLIT_NO_EMPTY);
             foreach ($stringArr as $line) {
                 if (strpos($line, '=>') !== false) {
                     $lineRule = explode('=>', $line);
