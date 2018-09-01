@@ -17,7 +17,7 @@ Automatically generate your API documentation from your existing Laravel routes.
 Require this package with composer using the following command:
 
 ```sh
-$ composer require oxycoder/laravel-apidoc-generator
+composer require oxycoder/laravel-apidoc-generator
 ```
 Using Laravel < 5.5? Go to your `config/app.php` and add the service provider:
 
@@ -32,7 +32,7 @@ Oxycoder\ApiDoc\ApiDocGeneratorServiceProvider::class,
 To generate your API documentation, use the `api:generate` artisan command.
 
 ```sh
-$ php artisan api:generate --routePrefix="api/v1/*"
+php artisan api:generate --routePrefix="api/v1/*"
 ```
 
 This command will scan your applications routes for the URIs matching `api/v1/*` and will parse these controller methods and form requests. For example:
@@ -70,7 +70,7 @@ Option | Description
  By default, this package returns the descriptions in english. You can publish the packages language files, to customise and translate the documentation output.
 
  ```sh
- $ php artisan vendor:publish
+ php artisan vendor:publish
  ```
 
  After the files are published you can customise view, styles or translate the descriptions in the language you want by renaming the `en` folder and editing the files in `public/vendor/apidoc/resources/lang`.
@@ -199,13 +199,13 @@ If your API route accepts a `GET` method, this package tries to call the API rou
 If your API needs an authenticated user, you can use the `actAsUserId` option to specify a user ID that will be used for making these API calls:
 
 ```sh
-$ php artisan api:generate --routePrefix="api/*" --actAsUserId=1
+php artisan api:generate --routePrefix="api/*" --actAsUserId=1
 ```
 
 If you don't want to automatically perform API response calls, use the `noResponseCalls` option.
 
 ```sh
-$ php artisan api:generate --routePrefix="api/*" --noResponseCalls
+php artisan api:generate --routePrefix="api/*" --noResponseCalls
 ```
 
 > Note: The example API responses work best with seeded data.
@@ -236,7 +236,7 @@ The default location of this file is: `public/docs/source/index.md`.
 After editing the markdown file, use the `api:update` command to rebuild your documentation as a static HTML file.
 
 ```sh
-$ php artisan api:update
+php artisan api:update
 ```
 
 As an optional parameter, you can use `--location` to tell the update command where your documentation can be found.
