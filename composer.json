@@ -16,7 +16,7 @@
     "require": {
         "php": ">=5.5.0",
         "fzaninotto/faker": "~1.0",
-        "laravel/framework": "^6.0.0",
+        "laravel/framework": ">=5.0.0",
         "ramsey/uuid": "^3.0",
         "mnapoli/front-yaml": "^1.5",
         "mnapoli/silly": "^1.0",
