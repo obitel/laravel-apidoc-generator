@@ -30,15 +30,15 @@
     },
     "autoload": {
         "files": [
-            "src/Obitel/ApiDoc/Documentarian/helpers.php"
+            "src/Oxycoder/ApiDoc/Documentarian/helpers.php"
         ],
         "psr-0": {
-            "Obitel\\ApiDoc": "src/"
+            "Oxycoder\\ApiDoc": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Obitel\\ApiDoc\\Tests\\": "tests/"
+            "Oxycoder\\ApiDoc\\Tests\\": "tests/"
         }
     },
     "extra": {
